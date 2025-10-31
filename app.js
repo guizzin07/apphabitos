@@ -1,4 +1,8 @@
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import LoginScreen from './LoginScreen';
+import MainApp from './app';
 import { View, Text, StyleSheet } from 'react-native';
 import { useHabits } from './hooks/useHabits';
 import HabitInput from './components/HabitInput';
@@ -14,6 +18,19 @@ export default function App() {
       <HabitInput onAdd={addHabit} />
       <HabitList habits={habits} onDelete={deleteHabit} />
     </View>
+  );
+}
+
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="MainApp" component={MainApp} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

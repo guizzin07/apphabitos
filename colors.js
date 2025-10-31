@@ -5,4 +5,5 @@ export const colors = {
   placeholder: '#aaa',
   addButton: '#4CAF50',
   deleteButton: '#ff5555',
+  emptyText: '#777',
 };

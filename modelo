@@ -1,0 +1,11 @@
+src/
+├── App.js
+├── constants/
+│   └── colors.js
+├── components/
+│   ├── HabitInput.js
+│   ├── HabitItem.js
+│   └── HabitList.js
+└── hooks/
+    ├── useHabits.js
+    └── useNotifications.js
